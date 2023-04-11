@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'Screens/ChatScreen.dart';
+import 'Screens/LoginScreen.dart';
+import 'Screens/WelcomeScreen.dart';
+import 'Screens/SignupScreen.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,7 +17,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyApp(),
+      initialRoute: WelcomeScreen.id,
+      routes: {
+        WelcomeScreen.id: (context) => WelcomeScreen(),
+        LoginScreen.id: (context) => LoginScreen(),
+        SignupScreen.id: (context) => SignupScreen(),
+        ChatScreen.id: (context) => ChatScreen(),
+      },
     );
   }
 }
