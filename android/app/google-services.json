@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "479873800806",
+    "project_id": "chatapp-55158",
+    "storage_bucket": "chatapp-55158.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479873800806:android:6bbad17d594914571daba7",
+        "android_client_info": {
+          "package_name": "com.hasirak.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479873800806-s3immqvfdo4n3di2323rq8pkqsrjkile.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDq9s9NoNUZK4GkHNnkOwI0G-4QqeB1YlU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "479873800806-s3immqvfdo4n3di2323rq8pkqsrjkile.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
