@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'LoginScreen.dart';
+
 class SignupScreen extends StatelessWidget {
   static String id = 'SignupScreen';
 
@@ -24,7 +26,7 @@ class SignupScreen extends StatelessWidget {
             children: [
               Container(height: 20),
               Image.asset("assets/Logo.png", width: 120),
-              Container(height: 70),
+              Container(height: 50),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 1),
                 child: TextField(
@@ -37,7 +39,7 @@ class SignupScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 12),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 1),
                 child: TextField(
@@ -50,13 +52,26 @@ class SignupScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 12),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 1),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    hintText: "Confirm Password",
+                    prefixIcon: Icon(Icons.lock_outline_rounded),
+                  ),
+                ),
+              ),
+              SizedBox(height: 25),
               SizedBox(
                 height: 50,
                 width: 230,
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: Text("Sign - Up"),
+                  child: Text("Sign - Up", style: TextStyle(fontSize: 17)),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.black,
                     shape: RoundedRectangleBorder(
@@ -66,26 +81,24 @@ class SignupScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 15,
               ),
               Image.asset("assets/line.png"),
               SizedBox(
-                height: 10,
+                height: 5,
               ),
               SizedBox(
                 height: 50,
                 width: 230,
                 child: TextButton.icon(
                   onPressed: () {},
-                  icon:
-                  Image.asset("assets/Google.png", width: 30, height: 30),
+                  icon: Image.asset("assets/Google.png", width: 30, height: 30),
                   label: Text(" Sign up with Google",
                       style: TextStyle(color: Colors.black)),
                   style: ButtonStyle(
                       foregroundColor:
-                      MaterialStateProperty.all<Color>(Colors.black),
-                      shape:
-                      MaterialStateProperty.all<RoundedRectangleBorder>(
+                          MaterialStateProperty.all<Color>(Colors.black),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
                               side: BorderSide(color: Colors.black)))),
@@ -100,23 +113,28 @@ class SignupScreen extends StatelessWidget {
                 child: TextButton.icon(
                   onPressed: () {},
                   icon:
-                  Image.asset("assets/Facebook.png", width: 30, height: 30),
+                      Image.asset("assets/Facebook.png", width: 30, height: 30),
                   label: Text(" Sign up with Facebook",
                       style: TextStyle(color: Colors.black)),
                   style: ButtonStyle(
                       foregroundColor:
-                      MaterialStateProperty.all<Color>(Colors.black),
-                      shape:
-                      MaterialStateProperty.all<RoundedRectangleBorder>(
+                          MaterialStateProperty.all<Color>(Colors.black),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
                               side: BorderSide(color: Colors.black)))),
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: 25,
               ),
-              Text("Already Have an Account? Login"),
+              GestureDetector(onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => LoginScreen()));
+              },
+                  child: Text("Already Have an Account? Login",style: TextStyle(fontSize: 15))),
             ],
           ),
         ),
